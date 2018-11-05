@@ -17,7 +17,9 @@ Imports:
     curl,
     dplyr,
     zoo,
-    utils
+    utils,
+    pbapply,
+    parallel
 Suggests:
     testthat,
     knitr,
