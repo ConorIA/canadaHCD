@@ -15,6 +15,7 @@
         on.exit(close(pb))
     }
     for (i in seq_along(sdata)) {
+        redownload <- FALSE
         # Grab the data form the cache, downloading it if it does not exist
         sdata[[i]] <- st$get(keys$key[i])
         # We don't want to cache and keep incomplete data, e.g. March data downloaded in mid-March. Brute-forcing...
@@ -33,7 +34,6 @@
           st$del(keys$key[i])
           sdata[[i]] <- st$get(keys$key[i])
         }
-        redownload = FALSE
         if (isTRUE(progress)) {
             setTxtProgressBar(pb, i)
         }
