@@ -4,8 +4,12 @@
 \alias{hcd_key}
 \title{Generate keys to Historical Climate Data records}
 \usage{
-hcd_key(station, timescale = c("monthly", "daily", "hourly"), year,
-  month)
+hcd_key(
+  station,
+  timescale = c("monthly", "daily", "hourly"),
+  year = 1981:2010,
+  month = 1:12
+)
 }
 \arguments{
 \item{station}{character; one or more HCD station IDs.}

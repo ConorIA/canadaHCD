@@ -17,7 +17,7 @@
 ##' keys
 ##' head(keys$key)
 `hcd_key` <- function(station, timescale = c("monthly", "daily", "hourly"),
-                      year, month) {
+                      year = 1981:2010, month = 1:12) {
     timescale <- match.arg(timescale)
     station <- as.integer(station)
     keys <- switch(timescale,

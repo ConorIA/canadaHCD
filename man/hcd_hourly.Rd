@@ -4,8 +4,15 @@
 \alias{hcd_hourly}
 \title{Download hourly Historical Climate Data records}
 \usage{
-hcd_hourly(station, year, month, collapse = TRUE, progress = TRUE,
-  cache = FALSE, ...)
+hcd_hourly(
+  station,
+  year,
+  month,
+  collapse = TRUE,
+  progress = TRUE,
+  cache = FALSE,
+  ...
+)
 }
 \arguments{
 \item{station}{Character or numeric; one or more HCD station IDs.}

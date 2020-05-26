@@ -4,8 +4,15 @@
 \alias{hcd_download}
 \title{Download CSV files of Historical Climate Data records}
 \usage{
-hcd_download(station, file, dir = tempdir(), timescale = c("monthly",
-  "daily", "hourly"), year = NULL, month = NULL, progress = TRUE)
+hcd_download(
+  station,
+  file,
+  dir = tempdir(),
+  timescale = c("monthly", "daily", "hourly"),
+  year = NULL,
+  month = NULL,
+  progress = TRUE
+)
 }
 \arguments{
 \item{station}{character; one or more HCD station IDs.}
@@ -30,7 +37,6 @@ Downloads raw CSV data files from the Canadian Historical Climate Data website. 
 }
 \examples{
 f <- hcd_download(1707, timescale = "monthly")
-f
 file.exists(f)
 
 ## specifying multiple storage folders
@@ -38,12 +44,10 @@ dirs <- file.path(tempdir(), c("2855", "1707"))
 dir.create(dirs[1])
 dir.create(dirs[2])
 f <- hcd_download(c(2855, 1707), timescale = "monthly", dir = dirs)
-f
 file.exists(f)
 ## ...and daily
 f <- hcd_download(c(2855, 1707), timescale = "daily", dir = dirs,
                   year = 1999:2000)
-f
 file.exists(f)
 }
 \author{

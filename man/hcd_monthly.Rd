@@ -4,8 +4,7 @@
 \alias{hcd_monthly}
 \title{Download monthly Historical Climate Data records}
 \usage{
-hcd_monthly(station, collapse = TRUE, progress = TRUE, cache = FALSE,
-  ...)
+hcd_monthly(station, collapse = TRUE, progress = TRUE, cache = FALSE, ...)
 }
 \arguments{
 \item{station}{Character; one or more HCD station IDs.}
